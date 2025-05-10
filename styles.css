@@ -1,51 +1,60 @@
-body {
+/* 重置样式，确保手机端一致性 */
+* {
   margin: 0;
   padding: 0;
-  height: 100vh;
+  box-sizing: border-box;
+}
+
+body {
   display: flex;
   justify-content: center;
   align-items: center;
+  min-height: 100vh;
   background: url('floral-bg.png') repeat;
+  background-size: 360px; /* 小尺寸平铺，避免模糊 */
   font-family: 'Arial', sans-serif;
 }
 
 .container {
   text-align: center;
   background: rgba(255, 255, 255, 0.8);
-  padding: 20px;
-  border-radius: 15px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  padding: 15px;
+  border-radius: 10px;
+  width: 90%; /* 适配手机宽度 */
+  max-width: 400px; /* 限制最大宽度 */
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
 }
 
 .center-text h1 {
   color: #e91e63;
-  font-size: 2.5em;
-  margin-bottom: 10px;
+  font-size: 1.5em; /* 手机端字体大小 */
+  margin-bottom: 8px;
 }
 
 .center-text p {
   color: #555;
-  font-size: 1.2em;
+  font-size: 1em;
+  margin-bottom: 15px;
 }
 
 .photos {
   display: flex;
-  justify-content: center;
-  gap: 20px;
-  margin-top: 20px;
+  flex-direction: column; /* 垂直排列 */
+  align-items: center;
+  gap: 10px;
 }
 
 .photos img {
-  width: 150px;
-  height: 150px;
+  width: 100px; /* 照片尺寸适合手机 */
+  height: 100px;
   object-fit: cover;
-  border-radius: 10px;
+  border-radius: 8px;
   cursor: pointer;
   transition: transform 0.3s;
 }
 
 .photos img:hover {
-  transform: scale(1.1);
+  transform: scale(1.05);
 }
 
 /* 子页面样式 */
@@ -54,25 +63,25 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh;
+  min-height: 100vh;
   background: url('floral-bg.png') repeat;
 }
 
 .subpage img {
-  width: 300px;
-  height: 400px;
+  width: 200px;
+  height: 300px;
   object-fit: cover;
-  border-radius: 15px;
+  border-radius: 10px;
   cursor: pointer;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 
 .subpage p {
   color: #333;
-  font-size: 1.2em;
+  font-size: 1em;
   text-align: center;
-  max-width: 600px;
+  max-width: 90%;
   background: rgba(255, 255, 255, 0.8);
-  padding: 15px;
-  border-radius: 10px;
+  padding: 10px;
+  border-radius: 8px;
 }
